@@ -19,12 +19,18 @@
            fetch="https://github.com/DirtyUnicorns/"
            review="gerrit.dirtyunicorns.com" />
 
+
+  <!-- WhyDu remote -->
+  <remote  name="whydu"
+           revision="p9x"
+           fetch="https://github.com/WhyDu/" />
+
   <!-- DU REPOS -->
 
   <!-- General -->
   <project path="bionic" name="android_bionic" remote="du" />
   <project path="bootable/recovery" name="android_bootable_recovery" remote="du" />
-  <project path="build/make" name="android_build" remote="du" >
+  <project path="build/make" name="android_build" remote="whydu" >
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
@@ -34,14 +40,14 @@
     <linkfile src="tools" dest="build/tools" />
   </project>
   <project path="build/kati" name="android_build_kati" remote="du" />
-  <project path="build/soong" name="android_build_soong" remote="du" >
+  <project path="build/soong" name="android_build_soong" remote="whydu" >
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
-  <project path="manifest" name="android_manifest" remote="du" revision="p9x-caf" />
+  <project path="manifest" name="android_manifest" remote="whydu" revision="p9x-caf" />
 
   <!-- Device -->
-  <project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" remote="du" revision="p9x-caf" />
+  <project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" remote="whydu" revision="p9x-caf" />
 
   <!-- External -->
   <project path="external/bson" name="android_external_bson" remote="du" revision="p9x-caf" />
@@ -58,7 +64,7 @@
 
   <!-- Frameworks -->
   <project path="frameworks/av" name="android_frameworks_av" remote="du" />
-  <project path="frameworks/base" name="android_frameworks_base" remote="du" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="whydu" />
   <project path="frameworks/compile/mclinker" name="android_frameworks_compile_mclinker" remote="du" />
   <project path="frameworks/native" name="android_frameworks_native" remote="du" />
   <project path="frameworks/opt/net/ims" name="android_frameworks_opt_net_ims" remote="du" revision="p9x-caf" />
@@ -66,27 +72,27 @@
   <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="du" revision="p9x-caf" />
 
   <!-- Hardware -->
-  <project path="hardware/interfaces" name="android_hardware_interfaces" remote="du" />
+  <project path="hardware/interfaces" name="android_hardware_interfaces" remote="whydu" />
   <project path="hardware/libhardware" name="android_hardware_libhardware" remote="du" revision="p9x-caf" />
   <project path="hardware/libhardware_legacy" name="android_hardware_libhardware_legacy" remote="du" revision="p9x-caf" />
   <project path="hardware/nxp/nfc" name="android_hardware_nxp_nfc" remote="du" revision="p9x-caf" />
   <project path="hardware/qcom/audio" name="android_hardware_qcom_audio" remote="du" revision="p9x-caf" />
   <project path="hardware/qcom/audio-caf/msm8960" name="android_hardware_qcom_audio" remote="du" revision="p9x-caf-8960" />
   <project path="hardware/qcom/audio-caf/msm8996" name="android_hardware_qcom_audio" remote="du" revision="p9x-caf-8996" />
-  <project path="hardware/qcom/audio-caf/msm8998" name="android_hardware_qcom_audio" remote="du" revision="p9x-caf-8998" />
+  <project path="hardware/qcom/audio-caf/msm8998" name="android_hardware_qcom_audio" remote="whydu" revision="p-caf-msm8998" />
   <project path="hardware/qcom/bootctrl" name="android_hardware_qcom_bootctrl" remote="du" revision="p9x-caf" />
   <project path="hardware/qcom/bt" name="android_hardware_qcom_bt" remote="du" revision="p9x-caf" />
   <project path="hardware/qcom/camera" name="android_hardware_qcom_camera" remote="du" revision="p9x-caf" />
   <project path="hardware/qcom/display" name="android_hardware_qcom_display" remote="du" revision="p9x-caf" />
   <project path="hardware/qcom/display-caf/msm8960" name="android_hardware_qcom_display" remote="du" revision="p9x-caf-8960" />
   <project path="hardware/qcom/display-caf/msm8996" name="android_hardware_qcom_display" remote="du" revision="p9x-caf-8996" />
-  <project path="hardware/qcom/display-caf/msm8998" name="android_hardware_qcom_display" remote="du" revision="p9x-caf-8998" />
+  <project path="hardware/qcom/display-caf/msm8998" name="android_hardware_qcom_display" remote="whydu" revision="p-caf-msm8998" />
   <project path="hardware/qcom/gps" name="android_hardware_qcom_gps" remote="du" revision="p9x-caf" />
   <project path="hardware/qcom/keymaster" name="android_hardware_qcom_keymaster" remote="du" revision="p9x-caf" />
   <project path="hardware/qcom/media" name="android_hardware_qcom_media" remote="du" revision="p9x-caf" />
   <project path="hardware/qcom/media-caf/msm8960" name="android_hardware_qcom_media" remote="du" revision="p9x-caf-8960" />
   <project path="hardware/qcom/media-caf/msm8996" name="android_hardware_qcom_media" remote="du" revision="p9x-caf-8996" />
-  <project path="hardware/qcom/media-caf/msm8998" name="android_hardware_qcom_media" remote="du" revision="p9x-caf-8998" />
+  <project path="hardware/qcom/media-caf/msm8998" name="android_hardware_qcom_media" remote="whydu" revision="p-caf-msm8998" />
   <project path="hardware/qcom/power" name="android_hardware_qcom_power" remote="du" revision="p9x-caf" />
   <project path="hardware/ril" name="android_hardware_ril" remote="du" />
   <project path="hardware/qcom/wlan" name="android_hardware_qcom_wlan" remote="du" revision="p9x-caf" />
@@ -112,7 +118,7 @@
 
   <!-- System -->
   <project path="system/bt" name="android_system_bt" remote="du" revision="p9x-caf" />
-  <project path="system/core" name="android_system_core" remote="du" revision="p9x-caf" />
+  <project path="system/core" name="android_system_core" remote="whydu" revision="p9x-caf" />
   <project path="system/extras" name="android_system_extras" remote="du" />
   <project path="system/sepolicy" name="android_system_sepolicy" remote="du" />
 
@@ -121,11 +127,11 @@
   <project path="prebuilts/clang/host/linux-x86" name="DirtyUnicorns/android_prebuilts_clang_host_linux-x86" remote="gitlab" revision="p9x" />
 
   <!-- Vendor -->
-  <project path="vendor/du" name="android_vendor_du" remote="du" >
+  <project path="vendor/du" name="android_vendor_du" remote="whydu" >
     <linkfile src="scripts/merge-aosp.sh" dest="merge-aosp.sh" />
   </project>
   <project path="vendor/codeaurora/telephony" name="android_vendor_codeaurora_telephony" remote="du" />
-  <project path="vendor/extras" name="android_vendor_extras" remote="du" />
+  <project path="vendor/extras" name="android_vendor_extras" remote="whydu" />
   <project path="vendor/nxp/opensource/commonsys/external/libnfc-nci" name="android_vendor_nxp_opensource_external_libnfc-nci" remote="du" revision="p9x-caf" />
   <project path="vendor/nxp/opensource/commonsys/frameworks" name="android_vendor_nxp_opensource_frameworks" remote="du" revision="p9x-caf" />
   <project path="vendor/nxp/opensource/commonsys/packages/apps/Nfc" name="android_vendor_nxp_opensource_packages_apps_Nfc" remote="du" revision="p9x-caf" />
@@ -139,6 +145,6 @@
   <project path="vendor/qcom/opensource/interfaces" name="android_vendor_qcom_opensource_interfaces" remote="du" revision="p9x-caf" />
   <project path="vendor/qcom/opensource/time-services" name="android_vendor_qcom_opensource_time-services" remote="du" revision="p9x-caf" />
   <project path="vendor/support" name="android_vendor_support" remote="du" />
-  <project path="vendor/themes" name="android_vendor_themes" remote="du" />
+  <project path="vendor/themes" name="android_vendor_themes" remote="whydu" />
 
 </manifest>
